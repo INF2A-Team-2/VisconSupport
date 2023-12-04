@@ -10,15 +10,16 @@ import Foundation
 class Requests {
     static var ServerUrl = "https://api.project-c.zoutigewolf.dev/"
     
-    static func Get(url: String, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
-        MakeRequest(urlString: url, method: "GET", parameters: nil, completion: completion)
+    static func Get<T: Decodable>(url: String, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        MakeRequest(urlString: url, method: "GET", parameters: nil, responseType: responseType, completion: completion)
     }
 
-    static func Post(url: String, parameters: [String: Any]?, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
-        MakeRequest(urlString: url, method: "POST", parameters: parameters, completion: completion)
+    static func Post<T: Decodable>(url: String, parameters: [String: Any]?, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        MakeRequest(urlString: url, method: "POST", parameters: parameters, responseType: responseType, completion: completion)
     }
 
-    private static func MakeRequest(urlString: String, method: String, parameters: [String: Any]?, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
+    private static func MakeRequest<T: Decodable>(urlString: String, method: String, parameters: [String: Any]?, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        print("\(method) \(urlString)")
         guard let url = URL(string: urlString) else {
             completion(.failure(NetworkError.invalidURL))
             return
@@ -26,7 +27,7 @@ class Requests {
 
         var request = URLRequest(url: url)
         request.httpMethod = method.uppercased()
-        
+
         if let authToken = Authentication.shared.token {
             request.addValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
         }
@@ -47,7 +48,7 @@ class Requests {
                 completion(.failure(error))
                 return
             }
-            
+
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(NetworkError.invalidResponse))
                 return
@@ -65,11 +66,8 @@ class Requests {
             }
 
             do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    completion(.success(json))
-                } else {
-                    completion(.failure(NetworkError.invalidResponseFormat))
-                }
+                let decodedObject = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedObject))
             } catch {
                 completion(.failure(error))
             }

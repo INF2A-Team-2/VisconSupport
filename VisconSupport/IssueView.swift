@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IssueView: View {
+    var issue: Issue? = nil
+    
     var body: some View {
         VStack {
             Text("Some Issue")

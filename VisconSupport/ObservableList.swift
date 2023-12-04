@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class ObservableList<T> : ObservableObject {
+    @Published var items: [T] = []
+    
+    init(items: [T] = []) {
+        self.items = items
+    }
+}

@@ -19,13 +19,11 @@ class Authentication : ObservableObject {
     }
     
     public func Login(username: String, password: String, completion: @escaping (Bool) -> Void) {
-        Requests.Post(url: Requests.ServerUrl + "api/login", parameters: ["username": username, "password": password]) { result in
+        Requests.Post(url: Requests.ServerUrl + "api/login", parameters: ["username": username, "password": password], responseType: [String: String].self) { result in
             switch result {
             case .success(let data):
-                if let token = data?["token"] as? String {
-                    self.token = token
-                    print("Login successful")
-                }
+                self.token = data["token"]
+                print("Login successful")
             
             case .failure(let error):
                 print("Failed to login")
@@ -45,20 +43,10 @@ class Authentication : ObservableObject {
     }
     
     private func FetchUser(completion: @escaping (Bool) -> Void) {
-        Requests.Get(url: Requests.ServerUrl + "api/login") { result in
+        Requests.Get(url: Requests.ServerUrl + "api/login", responseType: User.self) { result in
             switch result {
             case .success(let data):
-                print(data!)
-                
-                self.currentUser = User(
-                    id: data?["id"] as! Int,
-                    username: data?["username"] as! String,
-                    type: AccountType(rawValue: data?["type"] as! Int)!,
-                    companyId: data?["companyId"] as? Int,
-                    unit: data?["unit"] as? String,
-                    phoneNumber: data?["phoneNumber"] as? String
-                )
-                
+                self.currentUser = data
                 completion(true)
                 
             case .failure(let error):

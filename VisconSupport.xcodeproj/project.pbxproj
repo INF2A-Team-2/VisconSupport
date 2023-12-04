@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81A746F72B1E2CF0007D852F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746F62B1E2CF0007D852F /* Users.swift */; };
 		81A746FA2B1E2D66007D852F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746F92B1E2D66007D852F /* User.swift */; };
+		81A746FC2B1E2EAB007D852F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746FB2B1E2EAB007D852F /* Issue.swift */; };
+		81A746FF2B1E2EBD007D852F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746FE2B1E2EBD007D852F /* Company.swift */; };
+		81A747012B1E2ECA007D852F /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747002B1E2ECA007D852F /* Machine.swift */; };
+		81A747032B1E2ED3007D852F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747022B1E2ED3007D852F /* Message.swift */; };
+		81A747052B1E2EE0007D852F /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747042B1E2EE0007D852F /* Attachment.swift */; };
+		81A747072B1E532F007D852F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747062B1E532F007D852F /* Utils.swift */; };
+		81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747082B1E5BC6007D852F /* ObservableList.swift */; };
+		81A7470B2B1E7554007D852F /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7470A2B1E7554007D852F /* PreviewData.swift */; };
+		81A747132B1E9589007D852F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747122B1E9589007D852F /* Model.swift */; };
 		81FC84BC2B1D1D6400C6595D /* VisconSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */; };
 		81FC84BE2B1D1D6400C6595D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BD2B1D1D6400C6595D /* LoginView.swift */; };
 		81FC84C02B1D1D6700C6595D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81FC84BF2B1D1D6700C6595D /* Assets.xcassets */; };
@@ -36,8 +44,16 @@
 
 /* Begin PBXFileReference section */
 		81A746F52B1E258D007D852F /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
-		81A746F62B1E2CF0007D852F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		81A746F92B1E2D66007D852F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		81A746FB2B1E2EAB007D852F /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		81A746FE2B1E2EBD007D852F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		81A747002B1E2ECA007D852F /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		81A747022B1E2ED3007D852F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		81A747042B1E2EE0007D852F /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		81A747062B1E532F007D852F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		81A747082B1E5BC6007D852F /* ObservableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableList.swift; sourceTree = "<group>"; };
+		81A7470A2B1E7554007D852F /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		81A747122B1E9589007D852F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		81FC84B82B1D1D6400C6595D /* VisconSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisconSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisconSupportApp.swift; sourceTree = "<group>"; };
 		81FC84BD2B1D1D6400C6595D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -81,7 +97,6 @@
 				81A746F82B1E2D57007D852F /* Models */,
 				81FC84C92B1D20DB00C6595D /* Authentication.swift */,
 				81FC84CB2B1D21F000C6595D /* Requests.swift */,
-				81A746F62B1E2CF0007D852F /* Users.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -98,6 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				81A746F92B1E2D66007D852F /* User.swift */,
+				81A746FB2B1E2EAB007D852F /* Issue.swift */,
+				81A746FE2B1E2EBD007D852F /* Company.swift */,
+				81A747002B1E2ECA007D852F /* Machine.swift */,
+				81A747022B1E2ED3007D852F /* Message.swift */,
+				81A747042B1E2EE0007D852F /* Attachment.swift */,
+				81A747122B1E9589007D852F /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +164,9 @@
 				81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */,
 				81FC84DE2B1D57A700C6595D /* UserView.swift */,
 				81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */,
+				81A747062B1E532F007D852F /* Utils.swift */,
+				81A747082B1E5BC6007D852F /* ObservableList.swift */,
+				81A7470A2B1E7554007D852F /* PreviewData.swift */,
 			);
 			path = VisconSupport;
 			sourceTree = "<group>";
@@ -225,26 +249,34 @@
 			files = (
 				81FC84DF2B1D57A700C6595D /* UserView.swift in Sources */,
 				81FC84ED2B1D5F1B00C6595D /* AdminManageCompaniesView.swift in Sources */,
+				81A747072B1E532F007D852F /* Utils.swift in Sources */,
 				81FC84BE2B1D1D6400C6595D /* LoginView.swift in Sources */,
+				81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */,
 				81FC84CC2B1D21F000C6595D /* Requests.swift in Sources */,
 				81FC84F12B1D5FC700C6595D /* AccountView.swift in Sources */,
 				81FC84EF2B1D5F3A00C6595D /* AdminCompanyView.swift in Sources */,
 				81FC84BC2B1D1D6400C6595D /* VisconSupportApp.swift in Sources */,
 				81FC84E92B1D5E9500C6595D /* AdminManageUsersView.swift in Sources */,
+				81A746FC2B1E2EAB007D852F /* Issue.swift in Sources */,
+				81A747032B1E2ED3007D852F /* Message.swift in Sources */,
+				81A747052B1E2EE0007D852F /* Attachment.swift in Sources */,
 				81FC84E12B1D57CE00C6595D /* EmployeeView.swift in Sources */,
 				81FC84F32B1D60C000C6595D /* KeyValueRow.swift in Sources */,
-				81A746F72B1E2CF0007D852F /* Users.swift in Sources */,
+				81A747132B1E9589007D852F /* Model.swift in Sources */,
 				81FC84E52B1D5D0800C6595D /* AdminManageIssuesView.swift in Sources */,
 				81FC84D42B1D2BE900C6595D /* AdminHomeView.swift in Sources */,
+				81A7470B2B1E7554007D852F /* PreviewData.swift in Sources */,
 				81FC84E72B1D5D9E00C6595D /* IssueView.swift in Sources */,
 				81FC84DD2B1D577000C6595D /* AdminView.swift in Sources */,
 				81FC84E32B1D5C5600C6595D /* AdminManageView.swift in Sources */,
+				81A747012B1E2ECA007D852F /* Machine.swift in Sources */,
 				81FC84EB2B1D5EAF00C6595D /* AdminUserView.swift in Sources */,
 				81FC84CE2B1D2BB200C6595D /* HomeView.swift in Sources */,
 				81FC84D02B1D2BCD00C6595D /* UserHomeView.swift in Sources */,
 				81FC84CA2B1D20DB00C6595D /* Authentication.swift in Sources */,
 				81FC84D22B1D2BDE00C6595D /* EmployeeHomeView.swift in Sources */,
 				81A746FA2B1E2D66007D852F /* User.swift in Sources */,
+				81A746FF2B1E2EBD007D852F /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
