@@ -18,25 +18,6 @@ struct LoginView: View {
                                            
     var body: some View {
         ZStack {
-//            VideoPlayer(player: backgroundPlayer)
-//                .scaledToFill()
-//                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-//                .onAppear {
-//                    backgroundPlayer.play()
-//
-//                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
-//                                                           object: backgroundPlayer.currentItem,
-//                                                           queue: .main) { _ in
-//                        backgroundPlayer.seek(to: .zero)
-//                        backgroundPlayer.play()
-//                    }
-//                }
-//                .onDisappear {
-//                    NotificationCenter.default.removeObserver(self)
-//                }
-//                .disabled(true)
-//                .overlay(.black.opacity(0.75))
-            
             VStack {
                 Image("LogoFull")
                     .resizable()
@@ -46,15 +27,39 @@ struct LoginView: View {
                 Spacer()
                 
                 VStack(alignment: .center, spacing: 16) {
-                    TextField("Username", text: self.$username)
-                        .autocapitalization(.none)
-                        .background(.white)
-                        .padding(10)
+                    VStack {
+                        HStack {
+                            Text("Username")
+                                .foregroundColor(.white)
+                                
+                                
+                            
+                            Spacer()
+                        }
+                        
+                        TextField("", text: self.$username)
+                            .autocapitalization(.none)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 4))
+                    }
+                    .padding()
                     
-                    SecureField("Password", text: self.$password)
-                        .background(.white)
-                        .padding(10)
+                    VStack {
+                        HStack {
+                            Text("Password")
+                                .foregroundColor(.white)
+                            
+                            Spacer()
+                        }
+                        
+                        SecureField("", text: self.$password)
+                            .autocapitalization(.none)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 4))
+                    }
+                    .padding()
                 }
+                .textFieldStyle(.roundedBorder)
                 
                 Button(action: OnLogin) {
                     Text("Login")
@@ -62,10 +67,34 @@ struct LoginView: View {
                         .foregroundColor(.black)
                 }
                 .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 4))
                 
                 Spacer()
             }
+            .frame(width: UIScreen.main.bounds.width)
         }
+        .background(
+            VideoPlayer(player: backgroundPlayer)
+                .aspectRatio(CGSize(width: 32, height: 9), contentMode: .fill)
+                .ignoresSafeArea(edges: .all)
+                .onAppear {
+
+                    backgroundPlayer.play()
+
+                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
+                                                           object: backgroundPlayer.currentItem,
+                                                           queue: .main) { _ in
+                        backgroundPlayer.seek(to: .zero)
+                        backgroundPlayer.play()
+                    }
+                }
+                .onDisappear {
+                    NotificationCenter.default.removeObserver(self)
+                }
+                .disabled(true)
+                .overlay(.black.opacity(0.75))
+                .blur(radius: 10)
+        )
         .alert(isPresented: $showInvalidCredentialsAlert) {
             Alert(
                 title: Text("Login failed"),
@@ -84,7 +113,6 @@ struct LoginView: View {
         }
     }
 }
-
 #Preview {
     LoginView()
 }
