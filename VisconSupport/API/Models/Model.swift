@@ -11,7 +11,7 @@ protocol ModelData: Decodable {
     var id: Int { get}
 }
 
-protocol Model: Identifiable, Decodable, ObservableObject {
+protocol Model: Identifiable, ObservableObject {
     associatedtype DataType: ModelData
     
     var id: Int { get set }
@@ -30,7 +30,13 @@ protocol Model: Identifiable, Decodable, ObservableObject {
 }
 
 extension Model {
-    static func Get(id: Int, completion: @escaping (Self?) -> Void) {
+    static func fillCache() {
+        Self.getAll() { data in
+            Self.cache = Dictionary(uniqueKeysWithValues: data.map { x in (x.id, x) })
+        }
+    }
+    
+    static func get(id: Int, completion: @escaping (Self?) -> Void) {
         Requests.Get(url: Requests.ServerUrl + "api/\(collectiveName)/\(id)", responseType: DataType.self) { result in
             switch result {
             case .success(let data):
@@ -50,7 +56,7 @@ extension Model {
         }
     }
     
-    static func GetAll(completion: @escaping ([Self]) -> Void) {
+    static func getAll(completion: @escaping ([Self]) -> Void) {
         Requests.Get(url: Requests.ServerUrl + "api/\(collectiveName)", responseType: [DataType].self) { result in
             switch result {
             case .success(let data):

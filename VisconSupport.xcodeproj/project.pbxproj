@@ -15,7 +15,6 @@
 		81A747052B1E2EE0007D852F /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747042B1E2EE0007D852F /* Attachment.swift */; };
 		81A747072B1E532F007D852F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747062B1E532F007D852F /* Utils.swift */; };
 		81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747082B1E5BC6007D852F /* ObservableList.swift */; };
-		81A7470B2B1E7554007D852F /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7470A2B1E7554007D852F /* PreviewData.swift */; };
 		81A747132B1E9589007D852F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747122B1E9589007D852F /* Model.swift */; };
 		81FC84BC2B1D1D6400C6595D /* VisconSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */; };
 		81FC84BE2B1D1D6400C6595D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BD2B1D1D6400C6595D /* LoginView.swift */; };
@@ -52,7 +51,6 @@
 		81A747042B1E2EE0007D852F /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		81A747062B1E532F007D852F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		81A747082B1E5BC6007D852F /* ObservableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableList.swift; sourceTree = "<group>"; };
-		81A7470A2B1E7554007D852F /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		81A747122B1E9589007D852F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		81FC84B82B1D1D6400C6595D /* VisconSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisconSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisconSupportApp.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */,
 				81A747062B1E532F007D852F /* Utils.swift */,
 				81A747082B1E5BC6007D852F /* ObservableList.swift */,
-				81A7470A2B1E7554007D852F /* PreviewData.swift */,
 			);
 			path = VisconSupport;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 				81A747132B1E9589007D852F /* Model.swift in Sources */,
 				81FC84E52B1D5D0800C6595D /* AdminManageIssuesView.swift in Sources */,
 				81FC84D42B1D2BE900C6595D /* AdminHomeView.swift in Sources */,
-				81A7470B2B1E7554007D852F /* PreviewData.swift in Sources */,
 				81FC84E72B1D5D9E00C6595D /* IssueView.swift in Sources */,
 				81FC84DD2B1D577000C6595D /* AdminView.swift in Sources */,
 				81FC84E32B1D5C5600C6595D /* AdminManageView.swift in Sources */,

@@ -24,7 +24,7 @@ struct AdminManageIssuesView: View {
                     
                     HStack {
                         Awesome.Solid.cogs.image.size(16)
-                        Text(String(i.machineId))
+                        Text(String(i.machine?.name ?? "-"))
                             .font(.caption)
                         
                         Spacer()
@@ -66,7 +66,7 @@ struct AdminManageIssuesView: View {
         }
         .navigationTitle(Text("Issues"))
         .onAppear {
-            Issue.GetAll() { issues in
+            Issue.getAll() { issues in
                 DispatchQueue.main.async {
                     self.issues.items = issues
                 }

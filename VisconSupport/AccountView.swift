@@ -19,7 +19,7 @@ struct AccountView: View {
     }
     
     func OnLogout() {
-        Authentication.shared.Logout()
+        Authentication.shared.logout()
     }
 }
 

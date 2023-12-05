@@ -75,7 +75,7 @@ struct LoginView: View {
     }
     
     func OnLogin() {
-        Authentication.shared.Login(username: self.username, password: self.password) { success in
+        Authentication.shared.login(username: self.username, password: self.password) { success in
             if success {
                 print(Authentication.shared.currentUser!)
             } else {

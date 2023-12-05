@@ -18,7 +18,7 @@ class Authentication : ObservableObject {
         
     }
     
-    public func Login(username: String, password: String, completion: @escaping (Bool) -> Void) {
+    public func login(username: String, password: String, completion: @escaping (Bool) -> Void) {
         Requests.Post(url: Requests.ServerUrl + "api/login", parameters: ["username": username, "password": password], responseType: [String: String].self) { result in
             switch result {
             case .success(let data):
@@ -29,25 +29,35 @@ class Authentication : ObservableObject {
                 print("Failed to login")
                 print(error)
                 completion(false)
+                
+                return
             }
             
-            self.FetchUser() { res in
+            self.fillCaches()
+            
+            self.fetchUser() { res in
                 completion(res)
             }
         }
     }
     
-    public func Logout() {
+    public func logout() {
         self.token = nil
         self.currentUser = nil
     }
     
-    private func FetchUser(completion: @escaping (Bool) -> Void) {
-        Requests.Get(url: Requests.ServerUrl + "api/login", responseType: User.self) { result in
+    private func fetchUser(completion: @escaping (Bool) -> Void) {
+        Requests.Get(url: Requests.ServerUrl + "api/login", responseType: UserData.self) { result in
             switch result {
             case .success(let data):
-                self.currentUser = data
-                completion(true)
+                User.get(id: data.id) {user in
+                    if user != nil {
+                        self.currentUser = user
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                }
                 
             case .failure(let error):
                 print("Failed to fetch user")
@@ -56,5 +66,12 @@ class Authentication : ObservableObject {
                 completion(false)
             }
         }
+    }
+    
+    private func fillCaches() {
+        User.fillCache()
+        Issue.fillCache()
+        Company.fillCache()
+        Machine.fillCache()
     }
 }
