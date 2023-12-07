@@ -9,13 +9,15 @@ import SwiftUI
 import AVKit
 
 struct LoginView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var username = ""
     @State var password = ""
     
     @State var showInvalidCredentialsAlert = false
     
     @State var backgroundPlayer = AVPlayer(url: Bundle.main.url(forResource: "background", withExtension: "mp4")!)
-                                           
+
     var body: some View {
         ZStack {
             VStack {
@@ -26,47 +28,35 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                VStack(alignment: .center, spacing: 16) {
+                VStack {
                     VStack {
-                        HStack {
-                            Text("Username")
-                                .foregroundColor(.white)
-                                
-                                
-                            
-                            Spacer()
-                        }
-                        
-                        TextField("", text: self.$username)
+                        TextField("Username", text: self.$username)
+                            .font(.custom("AvenirNext-Regular", size: UIFont.systemFontSize))
                             .autocapitalization(.none)
-                            .background(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 4))
                     }
-                    .padding()
+                    .padding(.leading)
+                    .padding(.trailing)
                     
                     VStack {
-                        HStack {
-                            Text("Password")
-                                .foregroundColor(.white)
-                            
-                            Spacer()
-                        }
-                        
-                        SecureField("", text: self.$password)
+
+                        SecureField("Password", text: self.$password)
+                            .font(.custom("AvenirNext-Regular", size: UIFont.systemFontSize))
                             .autocapitalization(.none)
-                            .background(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 4))
                     }
-                    .padding()
+                    .padding(.leading)
+                    .padding(.trailing)
                 }
                 .textFieldStyle(.roundedBorder)
                 
                 Button(action: OnLogin) {
                     Text("Login")
+                        .font(.custom("AvenirNext-Regular", size: UIFont.systemFontSize))
                         .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
-                        .foregroundColor(.black)
+                        .foregroundColor(self.colorScheme == .light ? .black : .white)
                 }
-                .background(.white)
+                .background(self.colorScheme == .light ? .white : .black)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
                 
                 Spacer()
@@ -105,9 +95,7 @@ struct LoginView: View {
     
     func OnLogin() {
         Authentication.shared.login(username: self.username, password: self.password) { success in
-            if success {
-                print(Authentication.shared.currentUser!)
-            } else {
+            if !success {
                 self.showInvalidCredentialsAlert = true
             }
         }

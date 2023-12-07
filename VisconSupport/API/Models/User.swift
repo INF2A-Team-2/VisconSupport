@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Awesome
 
 enum AccountType: Int, Decodable {
     case User = 0
@@ -98,6 +99,19 @@ final class User : Model {
                     self.objectWillChange.send()
                 }
             }
+        }
+    }
+    
+    func getIcon() -> String {
+        switch self.type {
+        case .User:
+            return "person.circle.fill"
+            
+        case .Employee:
+            return "stethoscope.circle.fill"
+            
+        case .Admin:
+            return "gearshape.circle.fill"
         }
     }
 }

@@ -32,7 +32,7 @@ protocol Model: Identifiable, ObservableObject {
 extension Model {
     static func fillCache() {
         Self.getAll() { data in
-            Self.cache = Dictionary(uniqueKeysWithValues: data.map { x in (x.id, x) })
+            print("Filled \(self.collectiveName) cache")
         }
     }
     
@@ -40,10 +40,11 @@ extension Model {
         Requests.Get(url: Requests.ServerUrl + "api/\(collectiveName)/\(id)", responseType: DataType.self) { result in
             switch result {
             case .success(let data):
-                if let obj = cache[id] {
+                if let obj = self.cache[id] {
                     obj.update(with: data)
                 } else {
-                    cache[id] = Self(data: data)
+                    self.cache[id] = Self(data: data)
+                    self.cache[id]?.fetchReferences()
                 }
                 
                 completion(self.cache[id])
@@ -61,10 +62,11 @@ extension Model {
             switch result {
             case .success(let data):
                 data.forEach { d in
-                    if let obj = cache[d.id] {
+                    if let obj = self.cache[d.id] {
                         obj.update(with: d)
                     } else {
-                        cache[d.id] = Self(data: d)
+                        self.cache[d.id] = Self(data: d)
+                        self.cache[d.id]?.fetchReferences()
                     }
                 }
                 

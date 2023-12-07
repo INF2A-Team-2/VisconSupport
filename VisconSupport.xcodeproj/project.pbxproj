@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81601E6E2B212EF5008CCE3A /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81601E6D2B212EF5008CCE3A /* Montserrat.ttf */; };
+		81601E762B215140008CCE3A /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81A746F52B1E258D007D852F /* background.mp4 */; };
 		81A746FA2B1E2D66007D852F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746F92B1E2D66007D852F /* User.swift */; };
 		81A746FC2B1E2EAB007D852F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746FB2B1E2EAB007D852F /* Issue.swift */; };
 		81A746FF2B1E2EBD007D852F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746FE2B1E2EBD007D852F /* Company.swift */; };
@@ -25,7 +27,6 @@
 		81FC84D02B1D2BCD00C6595D /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */; };
 		81FC84D22B1D2BDE00C6595D /* EmployeeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84D12B1D2BDE00C6595D /* EmployeeHomeView.swift */; };
 		81FC84D42B1D2BE900C6595D /* AdminHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */; };
-		81FC84D82B1D40E000C6595D /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81FC84D72B1D40E000C6595D /* background.mp4 */; };
 		81FC84DB2B1D56AB00C6595D /* Awesome in Frameworks */ = {isa = PBXBuildFile; productRef = 81FC84DA2B1D56AB00C6595D /* Awesome */; };
 		81FC84DD2B1D577000C6595D /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84DC2B1D577000C6595D /* AdminView.swift */; };
 		81FC84DF2B1D57A700C6595D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84DE2B1D57A700C6595D /* UserView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81601E6D2B212EF5008CCE3A /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		81A746F52B1E258D007D852F /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		81A746F92B1E2D66007D852F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		81A746FB2B1E2EAB007D852F /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 		81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeView.swift; sourceTree = "<group>"; };
 		81FC84D12B1D2BDE00C6595D /* EmployeeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeHomeView.swift; sourceTree = "<group>"; };
 		81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeView.swift; sourceTree = "<group>"; };
-		81FC84D72B1D40E000C6595D /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.mp4; path = ../../../../../../../Movies/background.mp4; sourceTree = "<group>"; };
 		81FC84DC2B1D577000C6595D /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		81FC84DE2B1D57A700C6595D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		81FC84E02B1D57CE00C6595D /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
@@ -89,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81601E6A2B212EB2008CCE3A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				81601E6D2B212EF5008CCE3A /* Montserrat.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		81A746F02B1E24CB007D852F /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +149,9 @@
 		81FC84BA2B1D1D6400C6595D /* VisconSupport */ = {
 			isa = PBXGroup;
 			children = (
-				81A746F42B1E2587007D852F /* Videos */,
 				81FC84BF2B1D1D6700C6595D /* Assets.xcassets */,
-				81FC84D72B1D40E000C6595D /* background.mp4 */,
+				81601E6A2B212EB2008CCE3A /* Fonts */,
+				81A746F42B1E2587007D852F /* Videos */,
 				81A746F02B1E24CB007D852F /* API */,
 				81FC84F02B1D5FC700C6595D /* AccountView.swift */,
 				81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */,
@@ -232,8 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81FC84D82B1D40E000C6595D /* background.mp4 in Resources */,
+				81601E762B215140008CCE3A /* background.mp4 in Resources */,
 				81FC84C02B1D1D6700C6595D /* Assets.xcassets in Resources */,
+				81601E6E2B212EF5008CCE3A /* Montserrat.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,11 +419,15 @@
 				DEVELOPMENT_TEAM = 625D2F4L5H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisconSupport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viscon Support";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,11 +452,15 @@
 				DEVELOPMENT_TEAM = 625D2F4L5H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisconSupport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viscon Support";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

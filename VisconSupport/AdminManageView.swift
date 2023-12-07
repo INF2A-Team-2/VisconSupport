@@ -13,17 +13,17 @@ struct AdminManageView: View {
         NavigationView {
             List {
                 NavigationLink(destination: AdminManageIssuesView()) {
-                    Awesome.Solid.list.image
+                    Image(systemName: "list.bullet")
                     Text("Issues")
                 }
                 
                 NavigationLink(destination: AdminManageUsersView()) {
-                    Awesome.Solid.users.image
+                    Image(systemName: "person.2.fill")
                     Text("Users")
                 }
                 
                 NavigationLink(destination: AdminManageCompaniesView()) {
-                    Awesome.Solid.building.image
+                    Image(systemName: "building.2.fill")
                     Text("Companies")
                 }
             }

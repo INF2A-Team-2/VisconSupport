@@ -58,6 +58,8 @@ final class Issue : Model {
     
     @Published var user: User? = nil
     @Published var machine: Machine? = nil
+    @Published var messages: [Message] = []
+    @Published var attachments: [Attachment] = []
     
     internal static var cache: [Int: Issue] = [:]
     
@@ -98,6 +100,19 @@ final class Issue : Model {
             DispatchQueue.main.async {
                 self.machine = machine
                 self.objectWillChange.send()
+            }
+        }
+        
+        Message.getAll(issueId: self.id) { messages in
+            DispatchQueue.main.async {
+                self.messages = messages
+                self.objectWillChange.send()
+            }
+        }
+        
+        Attachment.getAll(issueId: self.id) { attachments in
+            DispatchQueue.main.async {
+                self.attachments = attachments
             }
         }
     }

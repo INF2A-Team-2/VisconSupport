@@ -12,7 +12,7 @@ struct AdminManageIssuesView: View {
     @ObservedObject var issues: ObservableList<Issue> = ObservableList<Issue>()
     
     var body: some View {
-        List(issues.items, id: \.id) { i in
+        List(issues.items.sorted { $1.timeStamp < $0.timeStamp }, id: \.id) { i in
             NavigationLink(destination: IssueView(issue: i)) {
                 VStack {
                     HStack {
@@ -23,7 +23,7 @@ struct AdminManageIssuesView: View {
                     }
                     
                     HStack {
-                        Awesome.Solid.cogs.image.size(16)
+                        Image(systemName: "gearshape.2.fill")
                         Text(String(i.machine?.name ?? "-"))
                             .font(.caption)
                         
@@ -31,7 +31,7 @@ struct AdminManageIssuesView: View {
                     }
                     
                     HStack {
-                        Awesome.Solid.user.image.size(16)
+                        Image(systemName: "person.fill")
                         Text(i.user?.username ?? "-")
                             .font(.caption)
                         
@@ -39,7 +39,7 @@ struct AdminManageIssuesView: View {
                     }
                     
                     HStack {
-                        Awesome.Solid.building.image.size(16)
+                        Image(systemName: "building.fill")
                         Text(i.user?.company?.name ?? "-")
                             .font(.caption)
                         
@@ -47,7 +47,7 @@ struct AdminManageIssuesView: View {
                     }
                     
                     HStack {
-                        Awesome.Solid.calendarDay.image.size(16)
+                        Image(systemName: "calendar")
                         Text(Utils.FormatDate(date: i.timeStamp, format: "d MMMM yyyy"))
                             .font(.caption)
                         
@@ -55,7 +55,7 @@ struct AdminManageIssuesView: View {
                     }
                     
                     HStack {
-                        Awesome.Solid.clock.image.size(16)
+                        Image(systemName: "clock")
                         Text(Utils.FormatDate(date: i.timeStamp, format: "HH:mm"))
                             .font(.caption)
                         
