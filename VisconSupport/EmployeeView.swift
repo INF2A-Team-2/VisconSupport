@@ -34,6 +34,13 @@ struct EmployeeView: View {
                 }
                 .tag(2)
             
+            MapView()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+                .tag(3)
+            
             AccountView()
                 .tabItem {
                     Awesome.Solid.user.image

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81586C1F2B220B7D00A81A9D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81586C1E2B220B7D00A81A9D /* MapView.swift */; };
 		81601E6E2B212EF5008CCE3A /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81601E6D2B212EF5008CCE3A /* Montserrat.ttf */; };
 		81601E762B215140008CCE3A /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81A746F52B1E258D007D852F /* background.mp4 */; };
 		81A746FA2B1E2D66007D852F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A746F92B1E2D66007D852F /* User.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81586C1E2B220B7D00A81A9D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		81601E6D2B212EF5008CCE3A /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		81A746F52B1E258D007D852F /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		81A746F92B1E2D66007D852F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				81FC84F02B1D5FC700C6595D /* AccountView.swift */,
 				81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */,
 				81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */,
+				81586C1E2B220B7D00A81A9D /* MapView.swift */,
 				81FC84EC2B1D5F1B00C6595D /* AdminManageCompaniesView.swift */,
 				81FC84E42B1D5D0800C6595D /* AdminManageIssuesView.swift */,
 				81FC84E82B1D5E9500C6595D /* AdminManageUsersView.swift */,
@@ -261,6 +264,7 @@
 				81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */,
 				81FC84CC2B1D21F000C6595D /* Requests.swift in Sources */,
 				81FC84F12B1D5FC700C6595D /* AccountView.swift in Sources */,
+				81586C1F2B220B7D00A81A9D /* MapView.swift in Sources */,
 				81FC84EF2B1D5F3A00C6595D /* AdminCompanyView.swift in Sources */,
 				81FC84BC2B1D1D6400C6595D /* VisconSupportApp.swift in Sources */,
 				81FC84E92B1D5E9500C6595D /* AdminManageUsersView.swift in Sources */,

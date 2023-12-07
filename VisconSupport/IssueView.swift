@@ -21,11 +21,14 @@ struct IssueView: View {
                     
                     Spacer()
                 }
-                .padding(.bottom, 8)
+                .padding(.bottom, 4)
                 
                 HStack {
                     Image(systemName: "person.fill")
+                        .frame(width: 24, height: 16)
+                        .foregroundColor(.secondary)
                     Text(issue?.user?.username ?? "user")
+                        .foregroundColor(.secondary)
                     
                     Spacer()
                 }
@@ -33,7 +36,10 @@ struct IssueView: View {
                 
                 HStack {
                     Image(systemName: "gearshape.2.fill")
+                        .frame(width: 24, height: 16)
+                        .foregroundColor(.secondary)
                     Text(issue?.machine?.name ?? "machine")
+                        .foregroundColor(.secondary)
                     
                     Spacer()
                 }
@@ -41,11 +47,14 @@ struct IssueView: View {
                 
                 HStack {
                     Image(systemName: "building.fill")
+                        .frame(width: 24, height: 16)
+                        .foregroundColor(.secondary)
                     Text(issue?.user?.company?.name ?? "company")
+                        .foregroundColor(.secondary)
                     
                     Spacer()
                 }
-                .padding(.bottom, 4)
+                .padding(.bottom, 16)
             }
             
             VStack {

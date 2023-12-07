@@ -52,7 +52,9 @@ class Authentication : ObservableObject {
             case .success(let data):
                 User.get(id: data.id) {user in
                     if user != nil {
-                        self.currentUser = user
+                        DispatchQueue.main.async {
+                            self.currentUser = user
+                        }
                         completion(true)
                     } else {
                         completion(false)

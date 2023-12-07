@@ -27,19 +27,26 @@ struct AdminView: View {
                 }
                 .tag(1)
             
+            MapView()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+                .tag(2)
+            
             Text("Logs")
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Logs")
                 }
-                .tag(4)
+                .tag(3)
             
             AccountView()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Account")
                 }
-                .tag(5)
+                .tag(4)
         }
     }
 }
