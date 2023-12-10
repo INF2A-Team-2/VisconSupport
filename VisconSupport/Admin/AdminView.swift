@@ -1,56 +1,55 @@
 //
-//  EmployeeView.swift
+//  AdminView.swift
 //  VisconSupport
 //
 //  Created by ZoutigeWolf on 04/12/2023.
 //
 
 import SwiftUI
-import Awesome
 
-struct EmployeeView: View {
+struct AdminView: View {
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: self.$selectedTab) {
-            EmployeeHomeView()
+            AdminHomeView()
                 .tabItem {
-                    Awesome.Solid.home.image
+                    Image(systemName: "house.fill")
                     Text("Home")
                 }
                 .tag(0)
             
-            Text("Issues")
+            AdminManageView()
                 .tabItem {
-                    Awesome.Solid.list.image
-                    Text("Issues")
+                    Image(systemName: "gearshape.2.fill")
+                    Text("Manage")
                 }
                 .tag(1)
-            
-            Text("Customers")
-                .tabItem {
-                    Awesome.Solid.users.image
-                    Text("Customers")
-                }
-                .tag(2)
             
             MapView()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
                 }
+                .tag(2)
+            
+            Text("Logs")
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Logs")
+                }
                 .tag(3)
             
             AccountView()
                 .tabItem {
-                    Awesome.Solid.user.image
+                    Image(systemName: "person.fill")
                     Text("Account")
                 }
-                .tag(3)
+                .tag(4)
         }
     }
 }
 
 #Preview {
-    EmployeeView()
+    AdminView()
 }

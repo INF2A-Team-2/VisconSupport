@@ -1,42 +1,48 @@
 //
-//  UserView.swift
+//  EmployeeView.swift
 //  VisconSupport
 //
 //  Created by ZoutigeWolf on 04/12/2023.
 //
 
 import SwiftUI
-import Awesome
 
-struct UserView: View {
+struct EmployeeView: View {
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: self.$selectedTab) {
-            UserHomeView()
+            EmployeeHomeView()
                 .tabItem {
-                    Awesome.Solid.home.image
+                    Image(systemName: "house.fill")
                     Text("Home")
                 }
                 .tag(0)
             
             Text("Issues")
                 .tabItem {
-                    Awesome.Solid.list.image
+                    Image(systemName: "list.bullet")
                     Text("Issues")
                 }
                 .tag(1)
             
-            Text("New issue")
+            Text("Customers")
                 .tabItem {
-                    Awesome.Solid.plus.image
-                    Text("New issue")
+                    Image(systemName: "person.2.fill")
+                    Text("Customers")
                 }
                 .tag(2)
             
+            MapView()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+                .tag(3)
+            
             AccountView()
                 .tabItem {
-                    Awesome.Solid.user.image
+                    Image(systemName: "person.fill")
                     Text("Account")
                 }
                 .tag(3)
@@ -45,5 +51,5 @@ struct UserView: View {
 }
 
 #Preview {
-    UserView()
+    EmployeeView()
 }

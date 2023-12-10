@@ -1,56 +1,48 @@
 //
-//  AdminView.swift
+//  UserView.swift
 //  VisconSupport
 //
 //  Created by ZoutigeWolf on 04/12/2023.
 //
 
 import SwiftUI
-import Awesome
 
-struct AdminView: View {
+struct UserView: View {
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: self.$selectedTab) {
-            AdminHomeView()
+            UserHomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
                 .tag(0)
             
-            AdminManageView()
+            Text("Issues")
                 .tabItem {
-                    Image(systemName: "gearshape.2.fill")
-                    Text("Manage")
+                    Image(systemName: "list.bullet")
+                    Text("Issues")
                 }
                 .tag(1)
             
-            MapView()
+            Text("New issue")
                 .tabItem {
-                    Image(systemName: "map")
-                    Text("Map")
+                    Image(systemName: "text.badge.plus")
+                    Text("New issue")
                 }
                 .tag(2)
-            
-            Text("Logs")
-                .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("Logs")
-                }
-                .tag(3)
             
             AccountView()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Account")
                 }
-                .tag(4)
+                .tag(3)
         }
     }
 }
 
 #Preview {
-    AdminView()
+    UserView()
 }

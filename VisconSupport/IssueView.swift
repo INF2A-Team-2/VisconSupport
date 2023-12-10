@@ -7,7 +7,6 @@
 
 import SwiftUI
 import AVKit
-import Awesome
 
 struct IssueView: View {
     var issue: Issue? = nil

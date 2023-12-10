@@ -29,19 +29,23 @@ final class Company: Model {
     
     static var collectiveName: String = "companies"
     
+    var data: CompanyData
+    
     var id: Int
     var name: String
     
     internal static var cache: [Int: Company] = [:]
     
     init(data: DataType) {
+        self.data = data
+        
         self.id = data.id
         self.name = data.name
     }
     
-    
-    
     func update(with data: DataType) {
+        self.data = data
+        
         self.name = data.name
         
         self.fetchReferences()

@@ -39,6 +39,8 @@ struct AttachmentData: ModelData {
 final class Attachment: Model {
     typealias DataType = AttachmentData
     
+    var data: AttachmentData
+    
     var id: Int
     var name: String?
     var mimeType: String
@@ -53,6 +55,8 @@ final class Attachment: Model {
     internal static var cache: [Int : Attachment] = [:]
 
     init(data: AttachmentData) {
+        self.data = data
+        
         self.id = data.id
         self.name = data.name
         self.mimeType = data.mimeType
@@ -63,6 +67,8 @@ final class Attachment: Model {
     
     
     func update(with data: AttachmentData) {
+        self.data = data
+        
         self.id = data.id
         self.name = data.name
         self.mimeType = data.mimeType
@@ -73,6 +79,14 @@ final class Attachment: Model {
         Issue.get(id: self.issueId) { issue in
             DispatchQueue.main.async {
                 self.issue = issue
+            }
+        }
+    }
+    
+    static func fillCache(_ issues: [Int]) {
+        issues.forEach { i in
+            self.getAll(issueId: i) { _ in
+                print("Filled \(self.collectiveName) cache for issue \(i)")
             }
         }
     }

@@ -11,12 +11,12 @@ import AVKit
 struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @State var username = ""
-    @State var password = ""
+    @State var username: String = ""
+    @State var password: String = ""
     
-    @State var showInvalidCredentialsAlert = false
+    @State var showInvalidCredentialsAlert: Bool = false
     
-    @State var backgroundPlayer = AVPlayer(url: Bundle.main.url(forResource: "background", withExtension: "mp4")!)
+    @State var backgroundPlayer: AVPlayer = AVPlayer(url: Bundle.main.url(forResource: "background", withExtension: "mp4")!)
 
     var body: some View {
         ZStack {
@@ -94,7 +94,7 @@ struct LoginView: View {
     }
     
     func OnLogin() {
-        Authentication.shared.login(username: self.username, password: self.password) { success in
+        Authentication.shared.login(self.username, self.password) { success in
             if !success {
                 self.showInvalidCredentialsAlert = true
             }

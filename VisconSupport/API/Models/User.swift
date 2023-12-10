@@ -6,17 +6,16 @@
 //
 
 import Foundation
-import Awesome
 
-enum AccountType: Int, Decodable {
+enum AccountType: Int, Decodable, CaseIterable, CustomStringConvertible {
     case User = 0
     case Employee = 1
     case Admin = 2
     
-    var toString: String {
+    var description: String {
         switch self {
         case .User:
-            return "User"
+            return "Customer"
         case .Employee:
             return "Employee"
         case .Admin:
@@ -58,6 +57,8 @@ final class User : Model {
     typealias DataType = UserData
     
     static var collectiveName: String = "users"
+    
+    var data: UserData
 
     var id: Int
     var username: String
@@ -71,6 +72,8 @@ final class User : Model {
     internal static var cache: [Int: User] = [:]
     
     init(data: DataType) {
+        self.data = data
+        
         self.id = data.id
         self.username = data.username
         self.type = data.type
@@ -82,6 +85,8 @@ final class User : Model {
     }
     
     func update(with data: DataType) {
+        self.data = data
+        
         self.username = data.username
         self.type = data.type
         self.companyId = data.companyId

@@ -14,6 +14,8 @@ protocol ModelData: Decodable {
 protocol Model: Identifiable, ObservableObject {
     associatedtype DataType: ModelData
     
+    var data: DataType { get set }
+    
     var id: Int { get set }
     
     static var collectiveName: String { get }
@@ -34,6 +36,10 @@ extension Model {
         Self.getAll() { data in
             print("Filled \(self.collectiveName) cache")
         }
+    }
+    
+    static func clearCache() {
+        self.cache.removeAll()
     }
     
     static func get(id: Int, completion: @escaping (Self?) -> Void) {

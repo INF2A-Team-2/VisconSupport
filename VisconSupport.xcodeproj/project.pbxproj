@@ -17,7 +17,6 @@
 		81A747032B1E2ED3007D852F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747022B1E2ED3007D852F /* Message.swift */; };
 		81A747052B1E2EE0007D852F /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747042B1E2EE0007D852F /* Attachment.swift */; };
 		81A747072B1E532F007D852F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747062B1E532F007D852F /* Utils.swift */; };
-		81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747082B1E5BC6007D852F /* ObservableList.swift */; };
 		81A747132B1E9589007D852F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A747122B1E9589007D852F /* Model.swift */; };
 		81FC84BC2B1D1D6400C6595D /* VisconSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */; };
 		81FC84BE2B1D1D6400C6595D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84BD2B1D1D6400C6595D /* LoginView.swift */; };
@@ -28,7 +27,6 @@
 		81FC84D02B1D2BCD00C6595D /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */; };
 		81FC84D22B1D2BDE00C6595D /* EmployeeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84D12B1D2BDE00C6595D /* EmployeeHomeView.swift */; };
 		81FC84D42B1D2BE900C6595D /* AdminHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */; };
-		81FC84DB2B1D56AB00C6595D /* Awesome in Frameworks */ = {isa = PBXBuildFile; productRef = 81FC84DA2B1D56AB00C6595D /* Awesome */; };
 		81FC84DD2B1D577000C6595D /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84DC2B1D577000C6595D /* AdminView.swift */; };
 		81FC84DF2B1D57A700C6595D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84DE2B1D57A700C6595D /* UserView.swift */; };
 		81FC84E12B1D57CE00C6595D /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84E02B1D57CE00C6595D /* EmployeeView.swift */; };
@@ -36,7 +34,7 @@
 		81FC84E52B1D5D0800C6595D /* AdminManageIssuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84E42B1D5D0800C6595D /* AdminManageIssuesView.swift */; };
 		81FC84E72B1D5D9E00C6595D /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84E62B1D5D9E00C6595D /* IssueView.swift */; };
 		81FC84E92B1D5E9500C6595D /* AdminManageUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84E82B1D5E9500C6595D /* AdminManageUsersView.swift */; };
-		81FC84EB2B1D5EAF00C6595D /* AdminUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84EA2B1D5EAF00C6595D /* AdminUserView.swift */; };
+		81FC84EB2B1D5EAF00C6595D /* AdminUserEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84EA2B1D5EAF00C6595D /* AdminUserEditView.swift */; };
 		81FC84ED2B1D5F1B00C6595D /* AdminManageCompaniesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84EC2B1D5F1B00C6595D /* AdminManageCompaniesView.swift */; };
 		81FC84EF2B1D5F3A00C6595D /* AdminCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */; };
 		81FC84F12B1D5FC700C6595D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC84F02B1D5FC700C6595D /* AccountView.swift */; };
@@ -54,7 +52,6 @@
 		81A747022B1E2ED3007D852F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		81A747042B1E2EE0007D852F /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		81A747062B1E532F007D852F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		81A747082B1E5BC6007D852F /* ObservableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableList.swift; sourceTree = "<group>"; };
 		81A747122B1E9589007D852F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		81FC84B82B1D1D6400C6595D /* VisconSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisconSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisconSupportApp.swift; sourceTree = "<group>"; };
@@ -73,7 +70,7 @@
 		81FC84E42B1D5D0800C6595D /* AdminManageIssuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManageIssuesView.swift; sourceTree = "<group>"; };
 		81FC84E62B1D5D9E00C6595D /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		81FC84E82B1D5E9500C6595D /* AdminManageUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManageUsersView.swift; sourceTree = "<group>"; };
-		81FC84EA2B1D5EAF00C6595D /* AdminUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserView.swift; sourceTree = "<group>"; };
+		81FC84EA2B1D5EAF00C6595D /* AdminUserEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserEditView.swift; sourceTree = "<group>"; };
 		81FC84EC2B1D5F1B00C6595D /* AdminManageCompaniesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManageCompaniesView.swift; sourceTree = "<group>"; };
 		81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCompanyView.swift; sourceTree = "<group>"; };
 		81FC84F02B1D5FC700C6595D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -85,13 +82,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81FC84DB2B1D56AB00C6595D /* Awesome in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810CC1E92B24A1B600FB8258 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */,
+				81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */,
+				81FC84EC2B1D5F1B00C6595D /* AdminManageCompaniesView.swift */,
+				81FC84E42B1D5D0800C6595D /* AdminManageIssuesView.swift */,
+				81FC84E82B1D5E9500C6595D /* AdminManageUsersView.swift */,
+				81FC84E22B1D5C5600C6595D /* AdminManageView.swift */,
+				81FC84EA2B1D5EAF00C6595D /* AdminUserEditView.swift */,
+				81FC84DC2B1D577000C6595D /* AdminView.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		810CC1EA2B24A1C000FB8258 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				81FC84D12B1D2BDE00C6595D /* EmployeeHomeView.swift */,
+				81FC84E02B1D57CE00C6595D /* EmployeeView.swift */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
+		810CC1EB2B24A1DC00FB8258 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */,
+				81FC84DE2B1D57A700C6595D /* UserView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		81601E6A2B212EB2008CCE3A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,30 +181,20 @@
 			isa = PBXGroup;
 			children = (
 				81FC84BF2B1D1D6700C6595D /* Assets.xcassets */,
-				81601E6A2B212EB2008CCE3A /* Fonts */,
 				81A746F42B1E2587007D852F /* Videos */,
+				81601E6A2B212EB2008CCE3A /* Fonts */,
 				81A746F02B1E24CB007D852F /* API */,
+				810CC1E92B24A1B600FB8258 /* Admin */,
+				810CC1EA2B24A1C000FB8258 /* Employee */,
+				810CC1EB2B24A1DC00FB8258 /* User */,
 				81FC84F02B1D5FC700C6595D /* AccountView.swift */,
-				81FC84EE2B1D5F3A00C6595D /* AdminCompanyView.swift */,
-				81FC84D32B1D2BE900C6595D /* AdminHomeView.swift */,
-				81586C1E2B220B7D00A81A9D /* MapView.swift */,
-				81FC84EC2B1D5F1B00C6595D /* AdminManageCompaniesView.swift */,
-				81FC84E42B1D5D0800C6595D /* AdminManageIssuesView.swift */,
-				81FC84E82B1D5E9500C6595D /* AdminManageUsersView.swift */,
-				81FC84E22B1D5C5600C6595D /* AdminManageView.swift */,
-				81FC84EA2B1D5EAF00C6595D /* AdminUserView.swift */,
-				81FC84DC2B1D577000C6595D /* AdminView.swift */,
-				81FC84D12B1D2BDE00C6595D /* EmployeeHomeView.swift */,
-				81FC84E02B1D57CE00C6595D /* EmployeeView.swift */,
 				81FC84CD2B1D2BB200C6595D /* HomeView.swift */,
 				81FC84E62B1D5D9E00C6595D /* IssueView.swift */,
 				81FC84F22B1D60C000C6595D /* KeyValueRow.swift */,
 				81FC84BD2B1D1D6400C6595D /* LoginView.swift */,
-				81FC84CF2B1D2BCD00C6595D /* UserHomeView.swift */,
-				81FC84DE2B1D57A700C6595D /* UserView.swift */,
-				81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */,
+				81586C1E2B220B7D00A81A9D /* MapView.swift */,
 				81A747062B1E532F007D852F /* Utils.swift */,
-				81A747082B1E5BC6007D852F /* ObservableList.swift */,
+				81FC84BB2B1D1D6400C6595D /* VisconSupportApp.swift */,
 			);
 			path = VisconSupport;
 			sourceTree = "<group>";
@@ -197,7 +216,6 @@
 			);
 			name = VisconSupport;
 			packageProductDependencies = (
-				81FC84DA2B1D56AB00C6595D /* Awesome */,
 			);
 			productName = VisconSupport;
 			productReference = 81FC84B82B1D1D6400C6595D /* VisconSupport.app */;
@@ -228,7 +246,6 @@
 			);
 			mainGroup = 81FC84AF2B1D1D6400C6595D;
 			packageReferences = (
-				81FC84D92B1D56AB00C6595D /* XCRemoteSwiftPackageReference "Awesome" */,
 			);
 			productRefGroup = 81FC84B92B1D1D6400C6595D /* Products */;
 			projectDirPath = "";
@@ -261,7 +278,6 @@
 				81FC84ED2B1D5F1B00C6595D /* AdminManageCompaniesView.swift in Sources */,
 				81A747072B1E532F007D852F /* Utils.swift in Sources */,
 				81FC84BE2B1D1D6400C6595D /* LoginView.swift in Sources */,
-				81A747092B1E5BC6007D852F /* ObservableList.swift in Sources */,
 				81FC84CC2B1D21F000C6595D /* Requests.swift in Sources */,
 				81FC84F12B1D5FC700C6595D /* AccountView.swift in Sources */,
 				81586C1F2B220B7D00A81A9D /* MapView.swift in Sources */,
@@ -280,7 +296,7 @@
 				81FC84DD2B1D577000C6595D /* AdminView.swift in Sources */,
 				81FC84E32B1D5C5600C6595D /* AdminManageView.swift in Sources */,
 				81A747012B1E2ECA007D852F /* Machine.swift in Sources */,
-				81FC84EB2B1D5EAF00C6595D /* AdminUserView.swift in Sources */,
+				81FC84EB2B1D5EAF00C6595D /* AdminUserEditView.swift in Sources */,
 				81FC84CE2B1D2BB200C6595D /* HomeView.swift in Sources */,
 				81FC84D02B1D2BCD00C6595D /* UserHomeView.swift in Sources */,
 				81FC84CA2B1D20DB00C6595D /* Authentication.swift in Sources */,
@@ -500,25 +516,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		81FC84D92B1D56AB00C6595D /* XCRemoteSwiftPackageReference "Awesome" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/LiveUI/Awesome";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		81FC84DA2B1D56AB00C6595D /* Awesome */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 81FC84D92B1D56AB00C6595D /* XCRemoteSwiftPackageReference "Awesome" */;
-			productName = Awesome;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81FC84B02B1D1D6400C6595D /* Project object */;
 }

@@ -38,6 +38,8 @@ final class Message: Model {
     
     static var collectiveName: String = "messages"
     
+    var data: MessageData
+    
     var id: Int
     var body: String
     var timeStamp: Date
@@ -50,6 +52,8 @@ final class Message: Model {
     internal static var cache: [Int : Message] = [:]
 
     init(data: MessageData) {
+        self.data = data
+        
         self.id = data.id
         self.body = data.body
         self.timeStamp = data.timeStamp
@@ -58,6 +62,8 @@ final class Message: Model {
     }
     
     func update(with data: MessageData) {
+        self.data = data
+        
         self.id = data.id
         self.body = data.body
         self.timeStamp = data.timeStamp
@@ -77,6 +83,14 @@ final class Message: Model {
             DispatchQueue.main.async {
                 self.issue = issue
                 self.objectWillChange.send()
+            }
+        }
+    }
+    
+    static func fillCache(_ issues: [Int]) {
+        issues.forEach { i in
+            self.getAll(issueId: i) { _ in
+                print("Filled \(self.collectiveName) cache for issue \(i)")
             }
         }
     }

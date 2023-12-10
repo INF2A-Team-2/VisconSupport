@@ -47,6 +47,8 @@ final class Issue : Model {
     
     static var collectiveName: String = "issues"
     
+    var data: IssueData
+    
     var id: Int
     var headline: String
     var actual: String
@@ -64,6 +66,8 @@ final class Issue : Model {
     internal static var cache: [Int: Issue] = [:]
     
     init(data: DataType) {
+        self.data = data
+        
         self.id = data.id
         self.headline = data.headline
         self.actual = data.actual
@@ -77,6 +81,8 @@ final class Issue : Model {
     }
     
     func update(with data: DataType) {
+        self.data = data
+        
         self.headline = data.headline
         self.actual = data.actual
         self.expected = data.expected

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Awesome
 
 struct AdminManageView: View {
     var body: some View {

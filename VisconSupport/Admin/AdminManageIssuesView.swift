@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Awesome
 
 struct AdminManageIssuesView: View {
     @State var issues: [Issue] = []
@@ -21,13 +20,13 @@ struct AdminManageIssuesView: View {
     @State private var filterUserId: Int = -1
     @State private var filterMachineId: Int = -1
     
-    var searchResults: [Issue] {
+    private var searchResults: [Issue] {
         var data: [Issue] = []
         if searchQuery.isEmpty {
             data = issues
         } else {
             data = issues.filter { i in
-                i.headline.contains(self.searchQuery)
+                i.headline.lowercased().contains(self.searchQuery.lowercased())
             }
         }
         
@@ -96,47 +95,21 @@ struct AdminManageIssuesView: View {
                             }
                             
                             HStack {
-                                Image(systemName: "gearshape.2.fill")
-                                    .foregroundColor(.secondary)
-                                    .frame(width: 24, height: 16)
-                                
-                                Text(String(i.machine?.name ?? "-"))
+                                Text("#\(i.id)")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 
                                 Spacer()
                             }
+                            .padding(.bottom, 4)
                             
                             HStack {
                                 Image(systemName: "person.fill")
                                     .foregroundColor(.secondary)
-                                    .frame(width: 24, height: 16)
+                                    .font(.system(size: 12))
+                                    .frame(width: 12)
                                 
-                                Text(i.user?.username ?? "-")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                
-                                Spacer()
-                            }
-                            
-                            HStack {
-                                Image(systemName: "building.fill")
-                                    .foregroundColor(.secondary)
-                                    .frame(width: 24, height: 16)
-                                
-                                Text(i.user?.company?.name ?? "-")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                
-                                Spacer()
-                            }
-                            
-                            HStack {
-                                Image(systemName: "calendar")
-                                    .foregroundColor(.secondary)
-                                    .frame(width: 24, height: 16)
-                                
-                                Text(Utils.FormatDate(date: i.timeStamp, format: "d MMMM yyyy"))
+                                Text("\(i.user?.username ?? "-") @ \(i.user?.company?.name ?? "-")")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 
@@ -146,9 +119,23 @@ struct AdminManageIssuesView: View {
                             HStack {
                                 Image(systemName: "clock")
                                     .foregroundColor(.secondary)
-                                    .frame(width: 24, height: 16)
+                                    .font(.system(size: 12))
+                                    .frame(width: 12)
                                 
-                                Text(Utils.FormatDate(date: i.timeStamp, format: "HH:mm"))
+                                Text("\(Utils.FormatDate(date: i.timeStamp, format: "d MMMM yyyy")) \(Utils.FormatDate(date: i.timeStamp, format: "HH:mm"))")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Image(systemName: "gearshape.2.fill")
+                                    .foregroundColor(.secondary)
+                                    .font(.system(size: 12))
+                                    .frame(width: 12)
+                                
+                                Text(String(i.machine?.name ?? "-"))
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 
@@ -158,7 +145,7 @@ struct AdminManageIssuesView: View {
                     }
                     .swipeActions(allowsFullSwipe: false) {
                         Button(role: .destructive) {
-                            print("delete issue \(i.id)")
+                            print("Deleted issue \(i.id)")
                         } label: {
                             Label("", systemImage: "trash")
                         }
